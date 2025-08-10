@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Derrick & Maame - Wedding Invitation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="floating-hashtag">#MeetTheKessie's 25</div>
+    <div class="floating-icons">
+        <img src="images/dove.jpg" class="floating-icon dove" alt="Dove">
+        <img src="images/red heart.png" class="floating-icon heart" alt="Heart">
+        <img src="images/flowers 1.png" class="floating-icon flower" alt="Flower">
+        <img src="images/man and woman.jpg" class="floating-icon trad-wedding-float" alt="Traditional Wedding">
+        <img src="images/man and woman 2.jpg" class="floating-icon white-wedding-float" alt="White Wedding">
+        <img src="images/pink flowers.jpg" class="floating-icon pink-flower" alt="Pink Flower">
+        <img src="images/red flowers.jpg" class="floating-icon red-flower" alt="Red Flower">
+    </div>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content login-modal">
+            <div class="modal-header">
+                <h2>Welcome</h2>
+                <p>Please enter your full name or phone number to view your invitation.</p>
+            </div>
+            <div class="modal-body">
+                <input type="text" id="loginInput" placeholder="Enter your details here">
+                <button onclick="checkInvitation()">View Invitation</button>
+                <p id="errorMessage" class="error-message"></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="mainContent" style="display: none;">
+        <header>
+            <div class="header-content">
+                <img src="images/infinity.jpg" alt="Infinity Love Symbol" class="infinity-symbol">
+                <div class="names-container">
+                    <h1 class="couple-names">Derrick & Maame</h1>
+                    <p class="wedding-date">September 27, 2025</p>
+                    <p class="invitation-text">
+                        Together with their families,<br>
+                        <b>Derrick Kessie & Maame Agyemang Adjei-Kuffour</b><br>
+                        joyfully invite you to celebrate their marriage.
+                    </p>
+                </div>
+            </div>
+        </header>
+
+        <section id="personalizedGreeting" class="personalized-greeting-section" style="display: none;"></section>
+
+        <section class="countdown-section">
+            <h2>Countdown to Our Special Day</h2>
+            <div id="countdown" class="countdown">
+                <div class="countdown-item"><span id="days">0</span><label>Days</label></div>
+                <div class="countdown-item"><span id="hours">0</span><label>Hours</label></div>
+                <div class="countdown-item"><span id="minutes">0</span><label>Minutes</label></div>
+                <div class="countdown-item"><span id="seconds">0</span><label>Seconds</label></div>
+            </div>
+        </section>
+        
+        <section class="bible-verse">
+            <div class="verse-image-container">
+                <img src="images/ring on bible.jpg" class="bible-image" alt="Ring on Bible">
+                <img src="images/female ring.jpeg" class="bible-image" alt="Wedding Ring">
+            </div>
+            <div class="verse-content">
+                <h3>Mark 10:9 - New World Translation</h3>
+                <p>"Therefore, what God has yoked together, let no man put apart."</p>
+            </div>
+        </section>
+
+        <section class="events-section">
+            <h2>Wedding Events</h2>
+            <div id="traditionalWedding" class="event-card" style="display: none;">
+                <img src="images/traditional wedding main image.jpg" class="event-image" alt="Traditional Wedding">
+                <div class="event-details">
+                    <h3>Traditional Wedding</h3>
+                    <p class="event-date"><i class="fas fa-calendar-alt"></i> Friday, September 26, 2025</p>
+                    <p class="event-time"><i class="fas fa-clock"></i> <span class="time-display" data-gmt="12:00 PM GMT">12:00 PM GMT</span></p>
+                    <p class="local-time"></p>
+                    <p class="event-location"><i class="fas fa-map-marker-alt"></i> Daasebre Estate, Nyame tease road, Koforidua, Ghana</p>
+                    <a href="https://maps.google.com/?q=6.078164,-0.286208" target="_blank" class="directions-btn">Get Directions</a>
+                </div>
+            </div>
+            <div id="whiteWedding" class="event-card">
+                <img src="images/white wedding main image.jpg" class="event-image" alt="White Wedding">
+                <div class="event-details">
+                    <h3>White Wedding</h3>
+                    <p class="event-date"><i class="fas fa-calendar-alt"></i> Saturday, September 27, 2025</p>
+                    <p class="event-time"><i class="fas fa-clock"></i> <span class="time-display" data-gmt="2:00 PM GMT">2:00 PM GMT</span></p>
+                    <p class="local-time"></p>
+                    <p class="event-location"><i class="fas fa-map-marker-alt"></i> AIDEN HOMES AND APARTMENTS HOTEL</p>
+                    <p class="event-sublocation">Two Streams - Mangoase Junction, Koforidua, Ghana</p>
+                    <a href="https://maps.google.com/?q=6.060408,-0.244967" target="_blank" class="directions-btn">Get Directions</a>
+                    <div class="zoom-details">
+                        <h4><i class="fas fa-video"></i> Join Virtually</h4>
+                        <p><strong>Meeting ID:</strong> 895 7632 3613</p>
+                        <p><strong>Passcode:</strong> MeettheKessie’s25</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="reception-section">
+             <div class="reception-content">
+                <h2>Celebration</h2>
+                <p>A reception with light refreshments will follow the white wedding ceremony at the same location.</p>
+             </div>
+             <img src="images/wedding cake.jpg" alt="Wedding Cake" class="reception-image">
+        </section>
+
+        <section class="bible-verses-section">
+             <div class="section-title-container">
+                <img src="images/jw.org.png" alt="JW.org Logo" class="title-flower">
+                <h2>Jehovah's Blessing on our Marriage</h2>
+                <img src="images/bible.jpg" alt="Bible" class="title-flower">
+            </div>
+            <div class="verse-card">
+                <h4>Proverbs 18:22 - New World Translation</h4>
+                <p>"The one who finds a good wife has found something good, And he receives Jehovah's favor."</p>
+            </div>
+            <div class="verse-card">
+                <h4>Ecclesiastes 4:9-12 - New World Translation</h4>
+                <p>"Two are better than one... a threefold cord cannot quickly be torn apart."</p>
+            </div>
+        </section>
+
+        <section class="songs-section">
+            <h2>Our Special Songs</h2>
+            <p class="songs-intro">Music has been a beautiful part of our journey. Click to listen.</p>
+            <div class="songs-container">
+                <div class="song-card" onclick="playVideo('myOnlyOne')">
+                    <h3>My Only One</h3>
+                    <p>An expression of our love</p>
+                </div>
+                <div class="song-card" onclick="playVideo('trulyInLove')">
+                    <h3>Truly in Love</h3>
+                    <p>Our journey with Jehovah</p>
+                </div>
+            </div>
+        </section>
+        
+        <div id="myOnlyOne" class="video-container" style="display: none;">
+            <button class="close-video" onclick="closeVideo('myOnlyOne')">×</button>
+            <video controls><source src="Jw Songs/My Only one.mp4" type="video/mp4"></video>
+            <div class="lyrics-container"></div>
+        </div>
+        <div id="trulyInLove" class="video-container" style="display: none;">
+            <button class="close-video" onclick="closeVideo('trulyInLove')">×</button>
+            <video controls><source src="Jw Songs/Truly in Love.mp4" type="video/mp4"></video>
+            <div class="lyrics-container"></div>
+        </div>
+
+        <section class="dress-code-section">
+            <h2>Modest Attire Requested</h2>
+            <div class="verse-card">
+                <h4>1 Timothy 2:9-10 - New World Translation</h4>
+                <p>"...adorn themselves in appropriate dress, with modesty and soundness of mind... in the way that is proper for women professing devotion to God, namely, through good works."</p>
+            </div>
+        </section>
+
+        <section class="important-info">
+            <h2>Important Information</h2>
+            <div class="info-card">
+                <i class="fas fa-envelope-open-text"></i>
+                <h3>Strictly By Invitation</h3>
+                <p>As much as we’d love to celebrate with everyone, this event is strictly by invite only. <strong>Please do not extend this invitation to others.</strong> 💛</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-calendar-times"></i>
+                <h3>RSVP</h3>
+                <p>We would appreciate it if you could let us know if you are unable to make it.</p>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <h2>Contact Us</h2>
+            <div class="contact-cards">
+                <div class="contact-card">
+                    <h3>Derrick Kessie</h3>
+                    <p><i class="fas fa-phone"></i> +1 519 476 9488</p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:dkessie@uwo.ca">dkessie@uwo.ca</a></p>
+                </div>
+                <div class="contact-card">
+                    <h3>Maame Agyemang Adjei-Kuffour</h3>
+                    <p><i class="fas fa-phone"></i> +233 53 140 2744</p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:maameagyemangkuffour@gmail.com">maameagyemangkuffour@gmail.com</a></p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>With Love, Derrick & Maame</p>
+        </footer>
+    </div>
+
+    <audio id="backgroundMusic"></audio>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
